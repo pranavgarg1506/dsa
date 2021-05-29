@@ -65,3 +65,22 @@ class Queue():
             return 0
 
         return self.rear - self.front + 1
+
+
+## CircularQueue using list
+
+class CircularQueue():
+
+    def __init__(self, size):
+        """
+        Initalizaing the CircularQueue with size 'size'
+        """
+        self.Q = [-1] * size
+        self.rear = self.front = -1
+        self.capacity = size
+
+
+    def isEmpty(self):
+        if self.rear == -1:
+            return True
+        return False
