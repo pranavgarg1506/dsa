@@ -12,28 +12,31 @@ class Stack():
             return
         self.arr = [-1] * size
         self.current_index= -1
-        self.size = size
+        self.capacity = size
+        self.size = 0
 
     def length(self):
         """
         returns the size of the occupied stack in O(1) Time Complexity
         """
-        return self.current_index + 1
+        return self.size
 
     def push(self, ele):
         """
         push the values in the stack in O(1) Time Complexity
         """
         if self.current_index == -1:
-            self.current_index += 1
+            self.current_index = 0
             self.arr[self.current_index] = ele
+            self.size = 1
             return
 
-        if self.size <= self.current_index + 1:
+        if self.capacity <= self.length():
             print("Stack is Full")
         else:
             self.current_index += 1
             self.arr[self.current_index] = ele
+            self.size += 1
 
     def printstack(self):
         print("Printing Stack")
@@ -48,7 +51,7 @@ class Stack():
         return False
 
     def isFull(self):
-        if self.length() == self.size:
+        if self.length() == self.capacity:
             return True
         return False
 
