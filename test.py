@@ -13,6 +13,7 @@ print(s1.isFull())"""
 
 
 
+## this chunk is for the implementation of Lineara queue
 q1 = Queue(3)
 
 print(q1.length())
