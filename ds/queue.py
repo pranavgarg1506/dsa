@@ -5,13 +5,15 @@
 
 class Queue():
 
-
     def __init__(self, size):
         self.arr = [-1] * size
         self.rear = self.front = -1
         self.capacity = size
 
     def isFull(self):
+        """
+        Time Complexity O(1)
+        """
         if self.rear == -1:
             return False
         
@@ -21,12 +23,18 @@ class Queue():
             return False
 
     def isEmpty(self):
+        """
+        Time Complexity O(1)
+        """
         if self.rear == -1:
             return True
 
         return False
 
     def enQueue(self, ele):
+        """
+        TIme Complexity O(1)
+        """
         if self.isFull():
             print("Queue is already Full")
             return 
@@ -40,6 +48,9 @@ class Queue():
             self.arr[self.rear] = ele
 
     def deQueue(self):
+        """
+        Time Complexity O(1)
+        """
         if self.isEmpty():
             print("Queue is already Empty, nothing to remove")
             return -1000
