@@ -1,5 +1,6 @@
 from ds.stack import Stack
 from ds.queue import Queue, CircularQueue
+from ds.linkedlist import LinkedList
 
 """s1 = Stack(2)
 print(s1.length())
@@ -27,11 +28,19 @@ q1.printQueue()
 """
 
 ## tests for Circular Queue
-q2 = CircularQueue(5)
+"""q2 = CircularQueue(5)
 
 q2.enQueue(25)
 q2.enQueue(26)
 e1 = q2.deQueue()
 print(e1)
 q2.enQueue(39)
-q2.printQueue()
+q2.printQueue()"""
+
+ll1 = LinkedList()
+
+ll1.insertAtFirst(5)
+ll1.insertAtEnd(8)
+ll1.insertAtEnd(11)
+ll1.insertAtPos(3, 36)
+ll1.printLL()

@@ -58,11 +58,15 @@ class Stack():
     def pop(self):
         if self.isEmpty():
             print("Stack is already Empty")
-            return -1000
+            return None
         ele = self.arr[self.current_index]
         self.current_index -=1
         return ele
 
+    def top(self):
+        if self.isEmpty():
+            return None
+        return self.arr[self.current_index]
 
 
 
