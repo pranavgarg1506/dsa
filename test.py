@@ -53,9 +53,10 @@ arr = [3,6,1,8,2,9,11,67]
 for i in arr:
     tree.create(i)
 
-tree.preOrderTraversal(tree.root)
-print("")
-tree.inOrderTraversal(tree.root)
-print("")
-tree.postOrderTraversal(tree.root)
-print("")
+pre = tree.preOrderTraversal(tree.root)
+inn = tree.inOrderTraversal(tree.root)
+post = tree.postOrderTraversal(tree.root)
+
+print(*pre, sep=' ', end="\n")
+print(*inn, sep=' ', end="\n")
+print(*post, sep=' ', end="\n")

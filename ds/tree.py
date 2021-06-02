@@ -21,6 +21,12 @@ Post Order   Left Right Node
 Level Order Traversal
 
 """
+
+
+from ds.stack import Stack
+
+
+
 class Node:
 
     def __init__(self, data) -> None:
@@ -59,30 +65,25 @@ class BinarySearchTree:
                     break
 
     ## All traversal using recursion
-    def preOrderTraversal(self, root):
-        if root == None:
-            return
-        print(root.data, end=" ")
-        self.preOrderTraversal(root.left)
-        self.preOrderTraversal(root.right)
+    def preOrderTraversal(self, root, values=[]):
+        if root:
+            values.append(root.data)
+            self.preOrderTraversal(root.left,values)
+            self.preOrderTraversal(root.right,values)
+        return values
 
+    def inOrderTraversal(self, root, values=[]):
+        if root:
+            self.inOrderTraversal(root.left,values)
+            values.append(root.data)
+            self.inOrderTraversal(root.right,values)
+        return values
 
-    def inOrderTraversal(self, root):
-        if root == None:
-            return
-        self.inOrderTraversal(root.left)
-        print(root.data, end = " ")
-        self.inOrderTraversal(root.right)
+    def postOrderTraversal(self, root, values=[]):
+        if root:
+            self.postOrderTraversal(root.left,values)
+            self.postOrderTraversal(root.right,values)
+            values.append(root.data)
+        return values
 
-    def postOrderTraversal(self, root):
-        if root == None:
-            return
-
-        self.postOrderTraversal(root.left)
-        self.postOrderTraversal(root.right)
-        print(root.data, end=" ")
-
-
-
-
-    
+    ## ALl traversal using stack
