@@ -1,7 +1,7 @@
 from ds.stack import Stack
 from ds.queue import Queue, CircularQueue
 from ds.linkedlist import LinkedList
-from ds.tree import BinarySearchTree, inOrderTraversal, preOrderTraversal
+from ds.tree import BinarySearchTree
 
 
 """s1 = Stack(2)
@@ -53,7 +53,9 @@ arr = [3,6,1,8,2,9,11,67]
 for i in arr:
     tree.create(i)
 
-preOrderTraversal(tree.root)
+tree.preOrderTraversal(tree.root)
 print("")
-inOrderTraversal(tree.root)
+tree.inOrderTraversal(tree.root)
+print("")
+tree.postOrderTraversal(tree.root)
 print("")

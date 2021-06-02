@@ -21,21 +21,6 @@ Post Order   Left Right Node
 Level Order Traversal
 
 """
-def preOrderTraversal(root):
-    if root == None:
-        return
-    print(root.data, end=" ")
-    preOrderTraversal(root.left)
-    preOrderTraversal(root.right)
-
-def inOrderTraversal(root):
-    if root == None:
-        return
-    inOrderTraversal(root.left)
-    print(root.data, end = " ")
-    inOrderTraversal(root.right)
-
-
 class Node:
 
     def __init__(self, data) -> None:
@@ -73,6 +58,29 @@ class BinarySearchTree:
                 else:
                     break
 
+    ## All traversal using recursion
+    def preOrderTraversal(self, root):
+        if root == None:
+            return
+        print(root.data, end=" ")
+        self.preOrderTraversal(root.left)
+        self.preOrderTraversal(root.right)
+
+
+    def inOrderTraversal(self, root):
+        if root == None:
+            return
+        self.inOrderTraversal(root.left)
+        print(root.data, end = " ")
+        self.inOrderTraversal(root.right)
+
+    def postOrderTraversal(self, root):
+        if root == None:
+            return
+
+        self.postOrderTraversal(root.left)
+        self.postOrderTraversal(root.right)
+        print(root.data, end=" ")
 
 
 
