@@ -1,6 +1,8 @@
 from ds.stack import Stack
 from ds.queue import Queue, CircularQueue
 from ds.linkedlist import LinkedList
+from ds.tree import BinarySearchTree, inOrderTraversal, preOrderTraversal
+
 
 """s1 = Stack(2)
 print(s1.length())
@@ -36,7 +38,7 @@ e1 = q2.deQueue()
 print(e1)
 q2.enQueue(39)
 q2.printQueue()"""
-
+"""
 ll1 = LinkedList()
 
 ll1.insertAtFirst(5)
@@ -44,3 +46,14 @@ ll1.insertAtEnd(8)
 ll1.insertAtEnd(11)
 ll1.insertAtPos(3, 36)
 ll1.printLL()
+"""
+
+tree = BinarySearchTree()
+arr = [3,6,1,8,2,9,11,67]
+for i in arr:
+    tree.create(i)
+
+preOrderTraversal(tree.root)
+print("")
+inOrderTraversal(tree.root)
+print("")
