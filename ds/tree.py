@@ -86,4 +86,4 @@ class BinarySearchTree:
             values.append(root.data)
         return values
 
-    ## ALl traversal using stack
+    ## ALl traversals using stack

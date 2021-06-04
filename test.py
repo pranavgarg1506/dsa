@@ -2,6 +2,7 @@ from ds.stack import Stack
 from ds.queue import Queue, CircularQueue
 from ds.linkedlist import LinkedList
 from ds.tree import BinarySearchTree
+from algo.sorts import bubbleSort, selectionSort, selectionSortStable
 
 
 """s1 = Stack(2)
@@ -48,7 +49,7 @@ ll1.insertAtPos(3, 36)
 ll1.printLL()
 """
 
-tree = BinarySearchTree()
+"""tree = BinarySearchTree()
 arr = [3,6,1,8,2,9,11,67]
 for i in arr:
     tree.create(i)
@@ -60,3 +61,8 @@ post = tree.postOrderTraversal(tree.root)
 print(*pre, sep=' ', end="\n")
 print(*inn, sep=' ', end="\n")
 print(*post, sep=' ', end="\n")
+"""
+
+arr = [3,4,1,7,2,9,6]
+selectionSortStable(arr)
+print(arr)
