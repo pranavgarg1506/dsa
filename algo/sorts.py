@@ -12,6 +12,7 @@ def bubbleSort(arr):
 
     cons:-
     even if the array is sorted it will keep on checking the adjacent elements.
+
     """
     n = len(arr)
 
@@ -36,6 +37,31 @@ def bubbleSort1(arr):
         if swap == False:
             break
 
+def bubbleSort2(arr):
+    """
+    using single while loop
+    """
+    n = len(arr)
+    nop = 0
+    i = 0
+    j = 1
+
+    while nop < n:
+        if j == n:
+            i = 0
+            j = 1
+            nop+=1
+        else:
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j],arr[i]
+            i += 1
+            j += 1
+
+
+
+
+    pass
+
 def selectionSort(arr):
     """
     In selection sort, we find the minimum ele from unsorted array part and place it at the beginnning of the array amd keep on doing this.
@@ -43,30 +69,51 @@ def selectionSort(arr):
     Time Complexity --> O(n^2)
     swaps --> O(n)
     Unstable
+    This is efficient when memory writing is very costly.
 
     """
-
     n = len(arr)
 
     for i in range(0,n):
         min_index = i
         for j in range(i+1,n):
-            if arr[j] < arr[min_index]:
+            if arr[min_index] > arr[j]:
                 min_index = j
-        arr[i], arr[min_index] = arr[min_index],arr[i]
+
+        ## swap part
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
 
 def selectionSortStable(arr):
+
     n = len(arr)
 
     for i in range(0,n):
         min_index = i
-        for j in range(i,n):
+
+        for j in range(i+1,n):
             if arr[j] < arr[min_index]:
                 min_index = j
 
+        ## to make stable
         temp = arr[min_index]
         while min_index > i:
             arr[min_index] = arr[min_index - 1]
             min_index -=1
 
         arr[i] = temp
+
+
+def insertionSort(arr):
+    n = len(arr)
+
+    for i in range(1,n):
+
+        temp = arr[i]
+        j = i-1
+        while j >=0 and arr[j] > temp:
+            arr[j+1] = arr[j]
+            j -=1
+        arr[j+1] = temp
+
+

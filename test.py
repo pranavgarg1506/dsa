@@ -2,7 +2,7 @@ from ds.stack import Stack
 from ds.queue import Queue, CircularQueue
 from ds.linkedlist import LinkedList
 from ds.tree import BinarySearchTree
-from algo.sorts import bubbleSort, selectionSort, selectionSortStable
+from algo.sorts import bubbleSort, selectionSort, selectionSortStable, bubbleSort2,insertionSort
 
 
 """s1 = Stack(2)
@@ -63,6 +63,6 @@ print(*inn, sep=' ', end="\n")
 print(*post, sep=' ', end="\n")
 """
 
-arr = [3,4,1,7,2,9,6]
-selectionSortStable(arr)
+arr = [6,5,4,3,2,1]
+insertionSort(arr)
 print(arr)
