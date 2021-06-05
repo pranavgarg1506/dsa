@@ -1,5 +1,3 @@
-from ds.linkedlist import LinkedList
-
 def bubbleSort(arr):
     """
     1. Basic Sorting Algorithm
@@ -147,6 +145,3 @@ def mergeSort(arr):
             arr[k] = right[j]
             j += 1
             k += 1
-
-            
-
