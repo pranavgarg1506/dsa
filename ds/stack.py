@@ -69,5 +69,31 @@ class Stack():
         return self.arr[self.current_index]
 
 
+class StackUsingList:
 
+    def __init__(self) -> None:
+        self.arr = []
+
+    def push(self,ele):
+        self.arr.append(ele)
+
+    def peep(self):
+        return self.arr[-1]
+
+    def isEmpty(self):
+        if len(self.arr) == 0:
+            return True
+        return False
+
+    def pop(self):
+        if self.isEmpty():
+            return None
+        else:
+            return self.arr.pop()
+
+    def printStack(self):
+        if self.isEmpty():
+            return "Stack is empty"
+
+        print(*self.arr, sep=' ', end='\n')
 

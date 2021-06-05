@@ -1,8 +1,8 @@
-from ds.stack import Stack
+from ds.stack import Stack, StackUsingList
 from ds.queue import Queue, CircularQueue
 from ds.linkedlist import LinkedList
 from ds.tree import BinarySearchTree
-from algo.sorts import bubbleSort, selectionSort, selectionSortStable, bubbleSort2,insertionSort
+from algo.sorts import bubbleSort, mergeSort, selectionSort, selectionSortStable, bubbleSort2,insertionSort
 
 
 """s1 = Stack(2)
@@ -63,6 +63,14 @@ print(*inn, sep=' ', end="\n")
 print(*post, sep=' ', end="\n")
 """
 
-arr = [6,5,4,3,2,1]
-insertionSort(arr)
+"""
+arr = [6,5,4,12,3,2,1]
+mergeSort(arr)
 print(arr)
+"""
+
+s = StackUsingList()
+s.push(5)
+s.push(44)
+s.push(11)
+s.printStack()
