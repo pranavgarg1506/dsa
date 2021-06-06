@@ -1,6 +1,3 @@
-"""
-Need to visit again
-"""
 
 # https://leetcode.com/problems/min-cost-climbing-stairs/
 
@@ -13,4 +10,12 @@ Return the minimum cost to reach the top of the floor.
 """
 
 cost = [10,15,20]
+
+if len(cost) == 2:
+    print(cost[1] if cost[0] > cost[1] else cost[0])
+else:
+    for i in range(2, len(cost)):
+        cost[i] += min(cost[i-1], cost[i-2])
+
+    print(cost[-1] if cost[-2] > cost[-1] else cost[-2])
 
