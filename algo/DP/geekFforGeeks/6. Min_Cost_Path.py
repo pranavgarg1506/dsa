@@ -17,6 +17,6 @@ for row in range(1, len(cost)):
     for col in range(1, len(cost)):
         cost[row][col] += min(cost[row][col-1], cost[row-1][col], cost[row-1][col-1])
 
-        
+
 print(cost)
 print(cost[-1][-1])
